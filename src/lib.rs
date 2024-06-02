@@ -246,7 +246,7 @@ impl YahooConnector {
     ///   Some(("user123", "password123"))
     /// );
     /// ```
-    pub fn new_w_proxy(url: &str, auth: Option<(&str, &str)>) -> Result<Self, YahooError> {
+/*     pub fn new_w_proxy(url: &str, auth: Option<(&str, &str)>) -> Result<Self, YahooError> {
         let client = if auth.is_some() {
             let auth = auth.expect("Conditioned");
             let proxy = reqwest::Proxy::all(url)?
@@ -267,7 +267,7 @@ impl YahooConnector {
             search_url: YSEARCH_URL,
         })
 
-    }
+    } */
 
     pub fn new_w_client(client: Client) -> Self {
         YahooConnector {
